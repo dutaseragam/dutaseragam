@@ -31,37 +31,29 @@
                 </div>
 
                 <!-- GRID -->
-                <div class="row g-4">
+                <div class="row g-3">
                     <div v-for="(item, i) in filteredItems" :key="i" class="col-6 col-md-4 col-lg-3">
-                        <div class="portfolio-card rounded-4 overflow-hidden shadow-sm border border-light h-100"
+                        <div class="portfolio-card rounded-4 overflow-hidden border border-light h-100"
                             @click="openModal(item)">
+
                             <!-- IMAGE -->
                             <div class="position-relative overflow-hidden" style="aspect-ratio:3/4;">
-                                <img :src="item.img" :alt="item.title" class="w-100 h-100 portfolio-img"
+                                <img :src="item.img" :alt="item.code" class="w-100 h-100 portfolio-img"
                                     style="object-fit:cover;">
 
                                 <div
                                     class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                                     <div class="text-center text-white px-3">
                                         <i class="bi bi-zoom-in fs-2 mb-2 d-block"></i>
-                                        <div class="fw-semibold" style="font-size:0.85rem;">
-                                            Lihat Detail
-                                        </div>
+                                        <div class="fw-semibold" style="font-size:0.85rem;">Lihat Detail</div>
                                     </div>
                                 </div>
-
-                                <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2 rounded-pill">
-                                    {{ item.tag }}
-                                </span>
                             </div>
 
-                            <!-- CONTENT -->
-                            <div class="p-3">
-                                <div class="fw-bold text-dark mb-1" style="font-size:0.9rem;">
-                                    {{ item.title }}
-                                </div>
-                                <div class="text-secondary" style="font-size:0.78rem;">
-                                    {{ item.desc }}
+                            <!-- TITLE: kode saja -->
+                            <div class="p-2 text-center">
+                                <div class="fw-semibold text-dark" style="font-size:0.82rem; letter-spacing:0.04em;">
+                                    {{ item.code }}
                                 </div>
                             </div>
 
@@ -133,20 +125,17 @@
                     <i class="bi bi-x-lg"></i>
                 </button>
 
-                <img :src="modalItem.img" :alt="modalItem.title"
+                <img :src="modalItem.img" :alt="modalItem.code"
                     style="width:100%; max-height:70vh; object-fit:contain; background:#0f1729;">
 
-                <div class="p-4">
-                    <span class="badge bg-warning text-dark rounded-pill mb-2 d-inline-block">
-                        {{ modalItem.tag }}
-                    </span>
-                    <h5 class="fw-bold mb-1">{{ modalItem.title }}</h5>
-                    <p class="text-secondary mb-0" style="font-size:0.9rem;">
-                        {{ modalItem.desc }}
-                    </p>
+                <div class="p-4 text-center">
+                    <div class="fw-bold fs-5 text-dark" style="letter-spacing:0.05em;">
+                        {{ modalItem.code }}
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -159,29 +148,16 @@ const modalItem = ref(null)
 const categories = ['Semua', 'Bomber', 'Hoodie', 'Varsity', 'Outdoor']
 
 const items = [
-    { title: 'Jaket Bomber Hitam Premium', desc: 'Bahan taslan halus, inner nyaman, cocok untuk komunitas', tag: 'Bomber', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922219/6_stylxc.png' },
-
-    { title: 'Hoodie Basic Cotton Fleece', desc: 'Bahan lembut, hangat, cocok untuk daily wear', tag: 'Hoodie', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922219/5_fdqmm6.png' },
-
-    { title: 'Jaket Safety Outdoor Reflective', desc: 'Material tahan angin dengan strip reflektif', tag: 'Outdoor', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922220/2_kbxel1.png' },
-
-    { title: 'Hoodie Zipper Custom Logo', desc: 'Bisa custom logo bordir atau sablon premium', tag: 'Hoodie', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922220/3_jzdrto.png' },
-
-    { title: 'Jaket Varsity Campus Style', desc: 'Wool kombinasi kulit sintetis gaya streetwear', tag: 'Varsity', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922220/4_ztcejc.png' },
-
-    { title: 'Jaket Outdoor Windbreaker', desc: 'Ringan, tahan angin, cocok aktivitas outdoor', tag: 'Outdoor', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922221/1_vqqxdk.png' },
-
-    { title: 'Bomber Army Edition', desc: 'Desain militer modern dengan bahan kuat', tag: 'Bomber', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922222/12_qntjp9.png' },
-
-    { title: 'Hoodie Oversize Streetwear', desc: 'Trend fashion kekinian dengan fit longgar', tag: 'Hoodie', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922222/10_uskzuv.png' },
-
-    { title: 'Jaket Work Outdoor Pro', desc: 'Cocok untuk pekerja lapangan dan proyek', tag: 'Outdoor', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922223/11_ie2u7a.png' },
-
-    { title: 'Varsity Custom Bordir Logo', desc: 'Bisa full custom untuk sekolah & komunitas', tag: 'Varsity', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922224/9_z5pmlp.png' },
-
-    { title: 'Bomber Lightweight Urban', desc: 'Ringan, stylish, cocok outfit harian', tag: 'Bomber', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922225/8_ytvkaf.png' },
-
-    { title: 'Jaket Outdoor Tactical Grey', desc: 'Material tahan cuaca dengan banyak pocket', tag: 'Outdoor', img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778922225/7_oe3dex.png' },
+    { code: 'BOM-001', tag: 'Bomber',  img: 'https://seragam-kantor.com/wp-content/uploads/2018/01/jaket-FA-009.jpg' },
+    { code: 'HOD-001', tag: 'Hoodie',  img: 'https://seragam-kantor.com/wp-content/uploads/2015/06/JAKET-KANTOR-TG-056-400x536.jpg' },
+    { code: 'OUT-001', tag: 'Outdoor', img: 'https://seragam-kantor.com/wp-content/uploads/2014/03/JAKET-KANTOR-TG-052-400x536.jpg' },
+    { code: 'HOD-002', tag: 'Hoodie',  img: 'https://seragam-kantor.com/wp-content/uploads/2014/02/JAKET-KANTOR-TG-047-400x536.jpg' },
+    { code: 'VAR-001', tag: 'Varsity', img: 'https://seragam-kantor.com/wp-content/uploads/2016/05/jaket-kantor-TG-042--400x536.jpg' },
+    { code: 'OUT-002', tag: 'Outdoor', img: 'https://seragam-kantor.com/wp-content/uploads/2014/01/JAKET-KANTOR-TG-007-400x536.jpg' },
+    { code: 'BOM-002', tag: 'Bomber',  img: 'https://seragam-kantor.com/wp-content/uploads/2013/09/JAKET-KANTOR-TG-008-400x536.jpg' },
+    { code: 'HOD-003', tag: 'Hoodie',  img: 'https://seragam-kantor.com/wp-content/uploads/2014/01/JAKET-KANTOR-TG-006-400x536.jpg' },
+    { code: 'OUT-003', tag: 'Outdoor', img: 'https://seragam-kantor.com/wp-content/uploads/2014/01/JAKET-KANTOR-TG-011-400x536.jpg' },
+    { code: 'VAR-002', tag: 'Varsity', img: 'https://seragam-kantor.com/wp-content/uploads/2014/01/jaket-kantor-TG-031-.jpg' },
 ]
 
 const filteredItems = computed(() =>
@@ -192,9 +168,9 @@ const filteredItems = computed(() =>
 
 const features = [
     { icon: 'bi-shield-fill-check', title: 'Kualitas Premium', desc: 'Material terbaik untuk jaket tahan lama' },
-    { icon: 'bi-palette-fill', title: 'Custom Design', desc: 'Bisa sesuai brand atau komunitas' },
-    { icon: 'bi-truck', title: 'Pengiriman Cepat', desc: 'Produksi & distribusi tepat waktu' },
-    { icon: 'bi-headset', title: 'Konsultasi Gratis', desc: 'Bantu dari desain sampai produksi' },
+    { icon: 'bi-palette-fill',      title: 'Custom Design',   desc: 'Bisa sesuai brand atau komunitas' },
+    { icon: 'bi-truck',             title: 'Pengiriman Cepat', desc: 'Produksi & distribusi tepat waktu' },
+    { icon: 'bi-headset',           title: 'Konsultasi Gratis', desc: 'Bantu dari desain sampai produksi' },
 ]
 
 function openModal(item) {
@@ -213,8 +189,8 @@ function closeModal() {
 }
 
 .portfolio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .12) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .10) !important;
 }
 
 .portfolio-img {
@@ -222,11 +198,11 @@ function closeModal() {
 }
 
 .portfolio-card:hover .portfolio-img {
-    transform: scale(1.07);
+    transform: scale(1.06);
 }
 
 .portfolio-overlay {
-    background: rgba(15, 23, 41, 0.55);
+    background: rgba(15, 23, 41, 0.50);
     opacity: 0;
     transition: opacity .3s ease;
 }
@@ -249,21 +225,14 @@ function closeModal() {
 .modal-box {
     background: #fff;
     width: 100%;
-    max-width: 520px;
+    max-width: 480px;
     position: relative;
     animation: modalIn .25s ease;
 }
 
 @keyframes modalIn {
-    from {
-        transform: scale(0.92);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+    from { transform: scale(0.92); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
 }
 
 .btn-close-custom {

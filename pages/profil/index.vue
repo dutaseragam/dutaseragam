@@ -7,7 +7,9 @@
         badge-icon="bi-building-fill"
         breadcrumb-current="Profil Perusahaan"
         />
-<ProfilPage />
+
+        <ProfilPage />
+
         <section class="py-5">
             <div class="container py-4">
                 <div class="row align-items-center g-5">
@@ -18,12 +20,10 @@
                             <img src="~assets/img/hero-1.png"
                                 alt="Workshop Duta Seragam" class="img-fluid rounded-3 shadow-lg w-100"
                                 style="height: 400px; object-fit: cover;">
-                            <!-- Gambar kecil overlay -->
                             <img src="https://i.pinimg.com/1200x/12/15/61/1215613ad72028262a6d50e76efa49f6.jpg"
                                 alt="Tim Produksi"
                                 class="position-absolute bottom-0 end-0 rounded-3 border border-3 border-white shadow d-none d-md-block"
                                 style="width: 48%; height: 200px; object-fit: cover;">
-                            <!-- Badge -->
                             <div
                                 class="position-absolute top-0 end-0 translate-middle-x d-flex align-items-center gap-2 bg-warning text-white rounded-3 p-3 shadow">
                                 <i class="bi bi-award-fill fs-4"></i>
@@ -37,9 +37,9 @@
 
                     <!-- Teks -->
                     <div class="col-lg-6">
-                        <span
-                            class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">Mengapa
-                            Kami?</span>
+                        <span class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">
+                            Mengapa Kami?
+                        </span>
                         <h2 class="fw-bold mb-3" style="font-size: clamp(1.5rem, 3vw, 2.2rem); color: #0f1729;">
                             Duta Seragam – Konveksi Profesional Bandung
                         </h2>
@@ -72,9 +72,9 @@
         <section class="py-5 bg-light">
             <div class="container py-4">
                 <div class="text-center mb-5">
-                    <span
-                        class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">Arah
-                        Perusahaan</span>
+                    <span class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">
+                        Arah Perusahaan
+                    </span>
                     <h2 class="fw-bold" style="color: #0f1729;">Visi &amp; Misi</h2>
                     <p class="text-secondary mx-auto" style="max-width: 520px;">
                         Landasan nilai dan tujuan besar yang mengarahkan setiap langkah Duta Seragam.
@@ -117,7 +117,7 @@
                                 </div>
                                 <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                                     <li v-for="(m, i) in misi" :key="i" class="d-flex gap-3 align-items-start">
-                                        <span class="badge bg-primary rounded-3 px-2 py-2 fs-xs fw-bold flex-shrink-0"
+                                        <span class="badge bg-primary rounded-3 px-2 py-2 fw-bold flex-shrink-0"
                                             style="font-size:0.72rem; min-width:32px;">
                                             {{ String(i + 1).padStart(2, '0') }}
                                         </span>
@@ -136,13 +136,12 @@
         <section class="py-5 bg-white">
             <div class="container py-4">
                 <div class="text-center mb-5">
-                    <span
-                        class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">Budaya
-                        Kami</span>
+                    <span class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">
+                        Budaya Kami
+                    </span>
                     <h2 class="fw-bold" style="color:#0f1729;">Budaya Profesional Kami</h2>
                     <p class="text-secondary mx-auto" style="max-width:520px;">
-                        Dari desain, pemilihan material, hingga kontrol kualitas — semua dikerjakan dengan standar
-                        tinggi.
+                        Dari desain, pemilihan material, hingga kontrol kualitas — semua dikerjakan dengan standar tinggi.
                     </p>
                 </div>
                 <div class="row g-4">
@@ -164,9 +163,9 @@
         <section class="py-5 bg-light">
             <div class="container py-4">
                 <div class="text-center mb-5">
-                    <span
-                        class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">Sumber
-                        Daya Manusia</span>
+                    <span class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">
+                        Sumber Daya Manusia
+                    </span>
                     <h2 class="fw-bold" style="color:#0f1729;">Tim Kami</h2>
                     <p class="text-secondary mx-auto" style="max-width:520px;">
                         Didukung oleh profesional berpengalaman di bidang garmen, desain, dan manajemen produksi.
@@ -181,14 +180,83 @@
                             </div>
                             <h5 class="fw-bold mb-1" style="color:#0f1729; font-size:1rem;">{{ member.name }}</h5>
                             <p class="text-warning fw-bold mb-2"
-                                style="font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;">{{
-                                member.role }}</p>
+                                style="font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;">
+                                {{ member.role }}
+                            </p>
                             <p class="text-secondary small mb-0 lh-lg">{{ member.desc }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ===== OUR FACTORY ===== -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+
+                <div class="text-center mb-5">
+                    <span class="badge rounded-pill text-warning bg-warning bg-opacity-10 fw-semibold px-3 py-2 mb-3">
+                        Fasilitas Produksi
+                    </span>
+                    <h2 class="fw-bold" style="color:#0f1729;">Our Factory</h2>
+                    <p class="text-secondary mx-auto" style="max-width:540px;">
+                        Workshop kami di Tasikmalaya dilengkapi mesin modern dan dioperasikan oleh tenaga ahli
+                        berpengalaman — menghasilkan seragam berkualitas tinggi dengan kapasitas besar.
+                    </p>
+                </div>
+
+                <!-- BENTO GRID -->
+                <div class="factory-bento mb-5">
+
+                    <div class="factory-cell cell-a">
+                        <img src="https://img.jakpost.net/c/2019/12/19/2019_12_19_83749_1576723742._large.jpg"
+                            alt="Ruang Produksi Utama" class="factory-img">
+                    </div>
+
+                    <div class="factory-cell cell-b">
+                        <img src="https://i.pinimg.com/1200x/a5/d7/8a/a5d78af33c6f6201246fdc0771c79021.jpg"
+                            alt="Mesin Jahit Modern" class="factory-img">
+                    </div>
+
+                    <div class="factory-cell cell-c">
+                        <img src="https://i.pinimg.com/1200x/e4/52/64/e452642ea57cb9cc29ac00a38da704c2.jpg"
+                            alt="Pemotongan Kain" class="factory-img">
+                    </div>
+
+                    <div class="factory-cell cell-d">
+                        <img src="https://i.pinimg.com/736x/9d/5a/6b/9d5a6ba6b5f277db00fe3c2ead56435d.jpg"
+                            alt="Kontrol Kualitas" class="factory-img">
+                    </div>
+
+                    <div class="factory-cell cell-e">
+                        <img src="https://i.pinimg.com/736x/e9/38/af/e938af3adba834e2efe387486e25c99f.jpg"
+                            alt="Mesin Produksi" class="factory-img">
+                    </div>
+
+                    <div class="factory-cell cell-f">
+                        <img src="https://i.pinimg.com/1200x/29/02/f5/2902f5b4278d704a1af641147509896f.jpg"
+                            alt="Gudang & Packing" class="factory-img">
+                    </div>
+
+                </div>
+
+                <!-- Stats Factory -->
+                <div class="row g-4 justify-content-center">
+                    <div v-for="stat in factoryStats" :key="stat.label" class="col-6 col-md-3">
+                        <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100 culture-card">
+                            <div class="rounded-3 d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary mx-auto mb-3"
+                                style="width:56px;height:56px;font-size:1.5rem;">
+                                <i :class="'bi ' + stat.icon"></i>
+                            </div>
+                            <div class="fw-bold lh-1 mb-1" style="color:#0f3460; font-size:1.6rem;">{{ stat.value }}</div>
+                            <div class="text-secondary small">{{ stat.label }}</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 </template>
 
@@ -211,34 +279,100 @@ const misi = [
 
 const cultures = [
     { icon: 'bi-pencil-square', title: 'Desain Profesional', desc: 'Tim desainer berpengalaman siap membantu mewujudkan seragam impian Anda.' },
-    { icon: 'bi-gem', title: 'Material Terbaik', desc: 'Pemilihan bahan berkualitas tinggi untuk kenyamanan dan ketahanan jangka panjang.' },
+    { icon: 'bi-gem',           title: 'Material Terbaik',   desc: 'Pemilihan bahan berkualitas tinggi untuk kenyamanan dan ketahanan jangka panjang.' },
     { icon: 'bi-gear-wide-connected', title: 'Produksi Modern', desc: 'Workshop dilengkapi mesin modern dengan kapasitas produksi besar dan efisien.' },
-    { icon: 'bi-shield-check', title: 'Kontrol Kualitas', desc: 'Setiap produk melalui QC ketat sebelum dikirimkan kepada klien.' },
+    { icon: 'bi-shield-check',  title: 'Kontrol Kualitas',   desc: 'Setiap produk melalui QC ketat sebelum dikirimkan kepada klien.' },
 ]
 
 const team = [
-    { name: 'Tim Desain', role: 'Creative & Design', icon: 'bi-palette-fill', desc: 'Merancang visual dan pola seragam sesuai kebutuhan dan identitas klien.' },
-    { name: 'Tim Produksi', role: 'Manufacturing', icon: 'bi-scissors', desc: 'Operator mesin berpengalaman memastikan setiap jahitan rapi dan presisi.' },
-    { name: 'Tim QC', role: 'Quality Control', icon: 'bi-patch-check-fill', desc: 'Mengecek setiap unit sebelum packing untuk memastikan standar kualitas terpenuhi.' },
-    { name: 'Tim Pengiriman', role: 'Logistics', icon: 'bi-truck', desc: 'Memastikan produk tiba tepat waktu ke seluruh penjuru Indonesia.' },
+    { name: 'Tim Desain',     role: 'Creative & Design', icon: 'bi-palette-fill',     desc: 'Merancang visual dan pola seragam sesuai kebutuhan dan identitas klien.' },
+    { name: 'Tim Produksi',   role: 'Manufacturing',     icon: 'bi-scissors',          desc: 'Operator mesin berpengalaman memastikan setiap jahitan rapi dan presisi.' },
+    { name: 'Tim QC',         role: 'Quality Control',   icon: 'bi-patch-check-fill',  desc: 'Mengecek setiap unit sebelum packing untuk memastikan standar kualitas terpenuhi.' },
+    { name: 'Tim Pengiriman', role: 'Logistics',          icon: 'bi-truck',             desc: 'Memastikan produk tiba tepat waktu ke seluruh penjuru Indonesia.' },
 ]
 
-const lokasiInfo = [
-    { icon: 'bi-geo-alt-fill', label: 'Alamat', value: 'Jl. Konveksi No. 12, Bandung, Jawa Barat' },
-    { icon: 'bi-telephone-fill', label: 'Telepon', value: '+62 812-3456-7890' },
-    { icon: 'bi-envelope-fill', label: 'Email', value: 'info@dutaseragam.com' },
-    { icon: 'bi-clock-fill', label: 'Jam Operasional', value: 'Senin – Sabtu, 08.00 – 17.00 WIB' },
+const factoryStats = [
+    { icon: 'bi-rulers',        value: '1.200 m²', label: 'Luas Workshop'         },
+    { icon: 'bi-cpu-fill',      value: '50+',      label: 'Unit Mesin Produksi'   },
+    { icon: 'bi-people-fill',   value: '80+',      label: 'Tenaga Kerja Terampil' },
+    { icon: 'bi-box-seam-fill', value: '5.000+',   label: 'Pcs / Bulan'           },
 ]
 </script>
 
 <style scoped>
-/* Hanya hover effect yang tidak bisa dilakukan Bootstrap */
+/* ===== Card hover ===== */
 .culture-card {
     transition: transform .25s ease, box-shadow .25s ease;
 }
-
 .culture-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, .12) !important;
+}
+
+/* ===== Factory Bento Grid ===== */
+.factory-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 280px 190px;
+    gap: 10px;
+}
+
+.factory-cell {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.factory-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s ease;
+}
+
+.factory-cell:hover .factory-img {
+    transform: scale(1.06);
+}
+
+.factory-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(15, 23, 41, 0.55);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Grid placement */
+.cell-a { grid-column: 1 / 6;  grid-row: 1 / 2; }
+.cell-b { grid-column: 6 / 9;  grid-row: 1 / 2; }
+.cell-c { grid-column: 9 / 13; grid-row: 1 / 2; }
+.cell-d { grid-column: 1 / 5;  grid-row: 2 / 3; }
+.cell-e { grid-column: 5 / 9;  grid-row: 2 / 3; }
+.cell-f { grid-column: 9 / 13; grid-row: 2 / 3; }
+
+/* Responsive mobile */
+@media (max-width: 767.98px) {
+    .factory-bento {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 8px;
+    }
+    .factory-cell {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        height: 160px;
+    }
+    .cell-a {
+        grid-column: 1 / 3 !important;
+        height: 210px;
+    }
 }
 </style>

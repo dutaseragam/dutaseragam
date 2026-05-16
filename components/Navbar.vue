@@ -68,11 +68,6 @@
                         </NuxtLink>
                     </li>
 
-                    <li class="nav-item">
-                        <NuxtLink class="nav-link fw-medium text-dark" to="/seragam-satpam" @click="closeNav">Seragam
-                            Satpam</NuxtLink>
-                    </li>
-
                     <li class="nav-item dropdown" @mouseenter="openDropdown('layanan')"
                         @mouseleave="closeDropdown('layanan')">
                         <a class="nav-link dropdown-toggle fw-medium text-dark" href="#"
@@ -92,6 +87,10 @@
                             <li>
                                 <NuxtLink class="dropdown-item" to="/layanan/flashdisk" @click="closeAll">Flashdisk
                                     Kartu Promosi</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="dropdown-item" to="/layanan/seragam-satpam" @click="closeAll">
+                                    Seragam Satpam</NuxtLink>
                             </li>
                         </ul>
                     </li>
