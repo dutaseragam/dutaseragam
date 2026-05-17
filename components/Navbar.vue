@@ -81,14 +81,6 @@
                                 </NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink class="dropdown-item" to="/layanan/powerbank" @click="closeAll">Powerbank
-                                    Promosi</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink class="dropdown-item" to="/layanan/flashdisk" @click="closeAll">Flashdisk
-                                    Kartu Promosi</NuxtLink>
-                            </li>
-                            <li>
                                 <NuxtLink class="dropdown-item" to="/layanan/seragam-satpam" @click="closeAll">
                                     Seragam Satpam</NuxtLink>
                             </li>

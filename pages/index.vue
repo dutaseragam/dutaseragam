@@ -379,7 +379,7 @@ const services = [
     title: 'Kaos / T-Shirt & Raglan',
     desc: 'Untuk seragam kantor, acara, komunitas, dan clothing brand.',
     icon: 'bi-person-fill',
-    img: 'https://res.cloudinary.com/dfx9dco9w/image/upload/v1778920631/6_fc7wzb.png',
+    img: 'https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/a14ab1ada81f0296848787d2010d2e0a7c08b656_xxl-1.jpg',
     link: '/portofolio/kaos',
   },
   {
